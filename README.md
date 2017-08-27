@@ -3,13 +3,13 @@
 ## visualize how these tools help recruiting activities phase by phase
 ## Important: articulate problem and benefit (time saved and etc)
 
-### 1. Understand Industries --- simple email scraping first --- information curation
+### 0. Understand Industries --- simple email scraping first --- information curation
 - Pain: There is no one-stop cite to check all relevant news.
 - Data sources: News sites, Newsletters, websites (Tech crunch, Kdnugget, etc), blogs.
 ** - Challenge: Categorize if good article or not. how many min to read it. **
 - Output: Website with curated news.
 
-### 1.5 Understand Companies (big firm) --- pending (replicate and modify 1.5)
+### 1a. Understand Companies (big firm) --- pending (replicate and modify 1.5)
 - Pain: It's tedious to look for all the fundamental inforamtion at multiple locations for comapnies.
 - Data sources: Yahoo, News Sites, etc
 ** Use google's/linkedin's function to show similar companies.**
@@ -17,7 +17,7 @@
 - Skill: web scraping, database storoage, data preprocessing, exploratory data analysis, data visualization, natural language processing (potentially)
 ** - Usecase: put famous company name in the search box. the app returns all the relevant information. Huge time saving **
 
-### 1.7 discover companies (startups) --- current priority
+### 1b. discover companies (startups) --- current priority
 - Pain: There are so many startups. It's quite difficult to tell which one to join.
 - Data sources: TechCrunch, CrunchBase, AngelList, Linkedin, (CISION PR NEWSWIRE, Bloomberg, Facebook, Twitter)
 ** - Challenge: categorize a company into a specific industry, how to collect valuable insights (competitive advantage, competitor)**
