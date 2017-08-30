@@ -1,5 +1,15 @@
 # 1b. discover companies (startups)
 
+### Plan
+
+- First version: Focus on creating MVP of a recommendation engine. 
+- Second version: Store data in the database (PostgreSQL)
+- Third version: Improve visualizations.
+- Fourth version: Write a formal reporting.
+- Fifth version: Web Application.
+
+TO DO: Complete Data Collection on 8/30 Wednesday
+
 ### Introduction
 
 - Pain: There are so many startups. It's quite difficult to tell which one to join.
@@ -60,5 +70,4 @@ regex4 = re.compile(r"(\w+|\w+\s\w+),\s", re.IGNORECASE)
 - 
 
 ### Step 3. Recommendation Engine
-
 
