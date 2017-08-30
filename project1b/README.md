@@ -13,6 +13,45 @@
 
 ### Step 1. Data Collection and Preprocessing
 
+**From Techcrunch**
+- Get a list of startup companies with a key word "raises C round" at Techcrunch. For each company, we also collect a link to each article that mention about a company and a short exerpt from the article. Now we have a title, a link, and an exerpt column.
+- Extract a funding round, money raised for the round, and when the article was published at from existing three columns.
+
+- Extract a company name from the title column.
+
+#### - First set of scenarios
+company_name + space + key verbs
+company_name + ","... + "," + space + key verbs such as raise, land, get
+
+- str1 = "Indian online lending platform Capital Float raises $45M Series C"
+- str2 = "Carwow, a UK startup that helps you buy a new car, raises $39M Series C"
+- str3 = "Stash raises $40 million Series C to make investing more approachable"
+
+regex = re.compile(r"(\w*\s*\w+.{0,1})(,.+,)*\s(raise|land|grab|step|receive|get|collect|close|secure|take|tap|score|snare|snag|nab|win)", re.IGNORECASE)
+
+#### - Second set of scenarios
+keyword such as marketplace, firm, startup, company + space + company_name
+
+-str1 = 
+regex2 = re.compile(r"(marketplace|firm|startup|company|competitor|platform|developer|retailer)\s(\w+\s*\w*)", re.IGNORECASE)
+
+#### - Third set of scenarios
+
+company_name + verbs
+regex4 = re.compile(r"(\w+|\w+\s\w+),\s", re.IGNORECASE)
+
+
+** Challenge: error handling. 
+
+**From Google**
+- 
+
+**From Linkedin**
+
 
 ### Step 2. 
+
+
+### Step 3.
+
 
