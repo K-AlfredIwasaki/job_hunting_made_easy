@@ -14,6 +14,9 @@
 ### Step 1. Data Collection and Preprocessing
 
 **From Techcrunch**
+- Input: search keywords
+- Output: a list of startups with some info.
+
 - Get a list of startup companies with a key word "raises C round" at Techcrunch. For each company, we also collect a link to each article that mention about a company and a short exerpt from the article. Now we have a title, a link, and an exerpt column.
 - Extract a funding round, money raised for the round, and when the article was published at from existing three columns.
 
@@ -44,14 +47,18 @@ regex4 = re.compile(r"(\w+|\w+\s\w+),\s", re.IGNORECASE)
 ** Challenge: error handling. 
 
 **From Google**
-- 
+- Input: Company name
+- Output: A link to the linkedin Website for the company
 
 **From Linkedin**
+- Input: A link to the linkedin Website for the company
+- Output: Profile information for each company
 
+### Step 2. Exploratory Data Analysis
+- Geo
+- Industry Mix
+- 
 
-### Step 2. 
-
-
-### Step 3.
+### Step 3. Recommendation Engine
 
 
