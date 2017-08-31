@@ -1,4 +1,10 @@
 Project_Overview.pptx
+ghostdriv
+backup
+ghostdriver
+*.pyc
+.ipynb_checkpoints
+__pycache__
 
 # Compiled source #
 ###################
@@ -38,4 +44,3 @@ Project_Overview.pptx
 ehthumbs.db
 Thumbs.db
 
-*.pyc
