@@ -30,6 +30,8 @@ TO DO: Complete Data Collection on 8/30 Wednesday
 - Get a list of startup companies with a key word "raises C round" at Techcrunch. For each company, we also collect a link to each article that mention about a company and a short exerpt from the article. Now we have a title, a link, and an exerpt column.
 - Extract a funding round, money raised for the round, and when the article was published at from existing three columns.
 
+** - Challenge: some articles are not relevant. **
+
 - Extract a company name from the title column.
 
 #### - First set of scenarios
