@@ -14,16 +14,16 @@ def get_link(company_name):
 	
 	if len(company_name.split(" ")) == 2:
 		company_name = company_name.split(" ")
-		search_key_words = '{}+{}+Linkedin'.format(company_name[0], company_name[1])
+		search_key_words = '{}+{}+Linkedin+Company'.format(company_name[0], company_name[1])
 	else:
-		search_key_words = '{}+Linkedin'.format(company_name)
+		search_key_words = '{}+Linkedin+Company'.format(company_name)
 
 
 	url = 'https://www.google.com/search?source=hp&q={}'.format(search_key_words)
 
-	time.sleep(3)
-
+	
 	driver.get(url)
+	time.sleep(5)
 
 	# Xpath will find a subnode of h3, a[@href] specifies that we only want <a> nodes with
 	# any href attribute that are subnodes of <h3> tags that have a class of 'r'
@@ -54,3 +54,23 @@ def get_link(company_name):
 
 	return link
 
+def write_company_info(company_list):
+    import csv
+    csvFile = open("linkedin_link_list.csv", 'a', newline='', encoding="utf8")
+    try:
+        writer = csv.writer(csvFile)
+        for company in company_list:
+            link = get_link(company)
+            writer.writerow( (
+                company,
+                link
+            ) )
+    finally:
+        csvFile.close()
+
+
+import pandas as pd
+import re
+data = pd.read_csv("article_after_processing3.csv", encoding='iso-8859-1')
+
+write_company_info(data.Company)
