@@ -68,9 +68,10 @@ def write_company_info(company_list):
     finally:
         csvFile.close()
 
+if __name__ == "__main__":
 
-import pandas as pd
-import re
-data = pd.read_csv("article_after_processing3.csv", encoding='iso-8859-1')
+	import pandas as pd
+	import re
+	data = pd.read_csv("article_after_processing3.csv", encoding='iso-8859-1')
 
-write_company_info(data.Company)
+	write_company_info(data.Company)
