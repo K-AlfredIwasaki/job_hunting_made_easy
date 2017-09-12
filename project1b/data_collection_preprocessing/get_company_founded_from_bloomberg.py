@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import re
 
 def get_link_to_bloomberg(company_name):
+	print (company_name)
 
 	driver = webdriver.PhantomJS(executable_path = r'C:\Users\K\phantomjs-2.1.1-windows\phantomjs-2.1.1-windows\bin\phantomjs.exe')
 	
@@ -30,12 +31,13 @@ def get_link_to_bloomberg(company_name):
 
 	regex = re.compile(r'www\.bloomberg\.com/research/stocks/private/snapshot\.asp%3Fprivcapid%\d\w(\d+)&', flags = re.I)
 
-	privcapid = re.search(regex, link).group(1)
+	privcapid = re.search(regex, link)
 
 	driver.quit()
 
 	if privcapid:
 		# print(privcapid)
+		privcapid = privcapid.group(1)
 
 		result = "https://www.bloomberg.com/research/stocks/private/snapshot.asp?privcapId={}".format(privcapid)
 		print (result)
@@ -50,7 +52,7 @@ def get_link_to_bloomberg(company_name):
 # print (get_link_to_bloomberg("silent circle")) 
 
 
-def get_address_from_bloomberg(url):
+def get_founded_from_bloomberg(url):
 
 	if url != "not found":
 
@@ -70,19 +72,11 @@ def get_address_from_bloomberg(url):
 
 		# print (div)
 
-		address_div = div.find("div", {'itemprop': 'address'})
+		span = div.find("span", {'itemprop': 'foundingDate'})
 
-		if address_div:
-			result = []
-			ptags = address_div.find_all('p')
-			for ptag in ptags:
-
-				txt = re.sub(r'&nbsp;', ' ', ptag.text)
-
-				result.append(ptag.text)
-
-			print (" ".join(result))
-			return " ".join(result)	
+		if span:
+			print("found")
+			return float(span.text)
 
 		else:
 			print ("bloomberg profile not found")
@@ -100,8 +94,8 @@ url = "https://www.bloomberg.com/research/stocks/private/snapshot.asp?privcapid=
 
 # print (get_address_from_bloomberg("https://www.bloomberg.com/research/stocks/private/snapshot.asp?privcapid=84932083"))
 
-def get_address_from_bloomberg_merged(company_name):
+def get_founded_from_bloomberg_merged(company_name):
 
-	return get_address_from_bloomberg(get_link_to_bloomberg(company_name))
+	return get_founded_from_bloomberg(get_link_to_bloomberg(company_name))
 
 # print (get_address_from_bloomberg_merged("2U"))
