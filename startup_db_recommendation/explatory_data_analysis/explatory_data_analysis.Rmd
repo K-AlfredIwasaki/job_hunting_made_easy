@@ -31,6 +31,8 @@ drops = c("title", "link", "excerpt", "Company", "money_raised", "linkedin_link"
           "Description", "Also.viewed", "Industry")
 data = data[, !(names(data) %in% drops) ]
 
+summary(data[, 1:13 ])
+
 # check columns 1:13. Columns 13: have same format.
 str(data[, 1:13 ])
 
@@ -79,7 +81,7 @@ data[data$money_raised_float > 200, c("CompanyName", "funding_round", "CompanySi
 
 - Number of Employees
 
-```{r, fig.height = 3, fig.show='hold', fig.align='center'}
+```{r, fig.height = 3.5, fig.show='hold', fig.align='center'}
 # counts = table(data$CompanySize)
 # counts
 
