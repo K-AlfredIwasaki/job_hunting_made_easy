@@ -5,6 +5,7 @@ ghostdriver
 *.pyc
 .ipynb_checkpoints
 __pycache__
+startup_db_recommendation.pptx
 
 # Compiled source #
 ###################
