@@ -1,4 +1,4 @@
-# Job_Hunting_Made_Easy by Machine Learning
+# Startup database and Recommendation Engine
 
 More detailed documentation can be found in the [PDF report](https://github.com/K-AlfredIwasaki/job_hunting_made_easy/blob/master/startup_db_recommendation.pdf)
 
