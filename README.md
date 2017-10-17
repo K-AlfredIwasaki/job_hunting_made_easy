@@ -46,7 +46,8 @@ Improve algorithms for various data extraction works by utilizing existing NLP p
 Store the data in database such as PostgreSQL for better data management and data retrieving capability.
 Data preprocessing
 
-#### Clean up codes and streamline the process.
+#### Data preprocessing
+Clean up codes and streamline the process.
 Incorporate better handlings.
 
 #### Recommendation Engine
